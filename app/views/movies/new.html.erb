@@ -1,4 +1,4 @@
-<h1>Create New Movie</h1>
+<h1>Cadastrar novo filme</h1>
 
 <%= form_with model: @movie do |f| %>
   <div>
@@ -21,7 +21,7 @@
     <%= f.text_area :description, rows: 5 %>
   </div>
   
-  <%= f.submit 'Save Changes' %>
+  <%= f.submit 'Salvar' %>
 <% end %>
 
-<%= link_to 'Back to movie list', movies_path %>
+<%= link_to 'Voltar para lista de filmes', movies_path %>

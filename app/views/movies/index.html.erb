@@ -3,10 +3,14 @@
 <table>
   <thead>
     <tr>
-      <th>Movie Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
-      <th>Info</th>
+      <th id="title_header" class="<%= 'hilite' if params[:sort] == 'title' %>">
+        <%= link_to "Título do Filme", movies_path(sort: 'title'), id: 'title_header' %>
+      </th>
+      <th>Classificação indicativa</th>
+      <th id="release_date_header" class="<%= 'hilite' if params[:sort] == 'release_date' %>">
+        <%= link_to "Data de Lançamento", movies_path(sort: 'release_date'), id: 'release_date_header' %>
+      </th>
+      <th>Informações</th>
     </tr>
   </thead>
   <tbody>
@@ -15,10 +19,10 @@
         <td><%= movie.title %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.release_date.strftime('%Y-%m-%d') if movie.release_date %></td>
-        <td><%= link_to "More about #{movie.title}", movie_path(movie) %></td>
+        <td><%= link_to "Mais sobre #{movie.title}", movie_path(movie) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Add new movie', new_movie_path %>
+<%= link_to 'Adicionar um novo filme', new_movie_path %>
