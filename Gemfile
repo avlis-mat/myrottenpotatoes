@@ -64,5 +64,5 @@ end
 group :production do
   # Use a real queuing backend for Active Job (and separate queues per environment) [
   gem "pg"  # para produção
-  gem "redis", "~> 4.0"  # para produção
+  gem "redis", "~> 5.4"  # para produção
 end
