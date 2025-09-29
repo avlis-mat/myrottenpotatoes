@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# O APP MyRottenPotatoes utiliza Ruby e Rails para implementar um aplicativo que permite cadastro de filmes com os dados Título, Classificação Indicativa, Data de Lançamento e Descrição
+# permitindo as operações básicas CRUD e implementando os 7 métodos RESTful no controlador.
 
-Things you may want to cover:
+# O aplicativo permite: 
+- ✅ Listar todos os filmes cadastrados
+- ✅ Adicionar novos filmes ao catálogo
+- ✅ Visualizar detalhes de cada filme
+- ✅ Editar informações de filmes existentes
+- ✅ Excluir filmes do catálogo
+- ✅ Ordenar filmes por título ou data de lançamento (clicando nos cabeçalhos)
 
-* Ruby version
+# Para executar o programa, primeiro é necessário realizar a instalação do Ruby e também do Rails, disponível em: https://guides.rubyonrails.org/getting_started.html
 
-* System dependencies
+# Depois, podemos clonar o repositório: 
+git clone https://github.com/avlis-mat/myrottenpotatoes.git
+cd myrottenpotatoes
 
-* Configuration
+# Instalar as dependências com: 
+bundle install
 
-* Database creation
+# Criar o banco de dados
+bin/rails db:create
 
-* Database initialization
+# Executar as migrations
+bin/rails db:migrate
 
-* How to run the test suite
+# Popular com dados iniciais
+bin/rails db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+# iniciar o servidor
+bin/rails server
 
-* Deployment instructions
-
-* ...
+# acessar o app local utilizando navegador
+http://localhost:3000/movies
